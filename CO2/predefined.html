@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String and Math Functions in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #0056b3;
+    }
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+    .section {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    button {
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003d80;
+    }
+    pre {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Predefined String and Math Functions in JavaScript</h1>
+  <p>This page explains and demonstrates commonly used predefined functions from the <strong>String</strong> and <strong>Math</strong> objects in JavaScript.</p>
+
+  <div class="section">
+    <h2>String Object Functions</h2>
+    <ul>
+      <li><code>length</code> – Returns the number of characters in a string.</li>
+      <li><code>toUpperCase()</code> – Converts a string to uppercase.</li>
+      <li><code>toLowerCase()</code> – Converts a string to lowercase.</li>
+      <li><code>charAt(index)</code> – Returns the character at the specified index.</li>
+      <li><code>indexOf(substring)</code> – Finds the first position of a substring.</li>
+      <li><code>substring(start, end)</code> – Extracts characters between two indices.</li>
+      <li><code>replace(search, replaceWith)</code> – Replaces part of a string with another value.</li>
+      <li><code>trim()</code> – Removes whitespace from both ends of a string.</li>
+    </ul>
+
+    <h3>Example:</h3>
+    <pre id="stringExample"></pre>
+  </div>
+
+  <div class="section">
+    <h2>Math Object Functions</h2>
+    <ul>
+      <li><code>Math.round(x)</code> – Rounds a number to the nearest integer.</li>
+      <li><code>Math.floor(x)</code> – Rounds a number down to the nearest integer.</li>
+      <li><code>Math.ceil(x)</code> – Rounds a number up to the nearest integer.</li>
+      <li><code>Math.sqrt(x)</code> – Returns the square root of a number.</li>
+      <li><code>Math.pow(x, y)</code> – Returns x raised to the power y.</li>
+      <li><code>Math.max(...numbers)</code> – Returns the largest number.</li>
+      <li><code>Math.min(...numbers)</code> – Returns the smallest number.</li>
+      <li><code>Math.random()</code> – Returns a random number between 0 and 1.</li>
+    </ul>
+
+    <h3>Example:</h3>
+    <pre id="mathExample"></pre>
+  </div>
+
+  <button onclick="showExamples()">Run Examples</button>
+
+  <script>
+    function showExamples() {
+      let text = "  Hello JavaScript!  ";
+      let stringOutput = "";
+      stringOutput += "Original String: '" + text + "'\n";
+      stringOutput += "Length: " + text.length + "\n";
+      stringOutput += "Uppercase: " + text.toUpperCase() + "\n";
+      stringOutput += "Lowercase: " + text.toLowerCase() + "\n";
+      stringOutput += "Character at 6: " + text.charAt(6) + "\n";
+      stringOutput += "Index of 'Java': " + text.indexOf("Java") + "\n";
+      stringOutput += "Substring (2, 9): '" + text.substring(2, 9) + "'\n";
+      stringOutput += "Replace 'JavaScript' with 'World': " + text.replace("JavaScript", "World") + "\n";
+      stringOutput += "Trimmed String: '" + text.trim() + "'\n";
+      document.getElementById("stringExample").textContent = stringOutput;
+
+      
+      let mathOutput = "";
+      mathOutput += "Math.round(4.6): " + Math.round(4.6) + "\n";
+      mathOutput += "Math.floor(4.6): " + Math.floor(4.6) + "\n";
+      mathOutput += "Math.ceil(4.2): " + Math.ceil(4.2) + "\n";
+      mathOutput += "Math.sqrt(25): " + Math.sqrt(25) + "\n";
+      mathOutput += "Math.pow(2, 3): " + Math.pow(2, 3) + "\n";
+      mathOutput += "Math.max(10, 45, 2, 99): " + Math.max(10, 45, 2, 99) + "\n";
+      mathOutput += "Math.min(10, 45, 2, 99): " + Math.min(10, 45, 2, 99) + "\n";
+      mathOutput += "Math.random(): " + Math.random().toFixed(3) + "\n";
+      document.getElementById("mathExample").textContent = mathOutput;
+    }
+  </script>
+
+</body>
+</html>
